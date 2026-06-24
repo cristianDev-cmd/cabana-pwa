@@ -12,7 +12,6 @@ pages_build_output_dir = ".vercel/output/static"
 binding = "DB"
 database_name = "cabana-pwa-db"
 database_id = "e2e119db-3f90-460d-afba-22d4f65d2a55"
-preview_database_id = "cabana-pwa-db-preview"
 migrations_dir = "./migrations"
 
 # ============================================
@@ -34,16 +33,6 @@ APP_URL = "https://cabana-pwa.pages.dev"
 # ============================================
 [env.production]
 name = "cabana-pwa-production"
-
-[[env.production.d1_databases]]
-binding = "DB"
-database_name = "cabana-pwa-db-prod"
-database_id = ""
-migrations_dir = "./migrations"
-
-[[env.production.r2_buckets]]
-binding = "STORAGE"
-bucket_name = "cabana-pwa-media-prod"
 
 # ============================================
 # Preview environment (for PRs and branch deploys)
