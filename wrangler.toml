@@ -1,0 +1,53 @@
+# Cloudflare Wrangler Configuration - CabanaPWA
+# Runtime: Next.js + Cloudflare Pages with Functions
+name = "cabana-pwa"
+compatibility_date = "2026-06-24"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# ============================================
+# D1 Database (SQLite-based)
+# ============================================
+[[d1_databases]]
+binding = "DB"
+database_name = "cabana-pwa-db"
+database_id = ""
+preview_database_id = "cabana-pwa-db-preview"
+migrations_dir = "./migrations"
+
+# ============================================
+# R2 Object Storage (Images, PDFs)
+# ============================================
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "cabana-pwa-media"
+preview_bucket_name = "cabana-pwa-media-preview"
+
+# ============================================
+# Environment variables
+# ============================================
+[vars]
+APP_NAME = "CabanaPWA"
+APP_URL = "https://cabana-pwa.pages.dev"
+
+# ============================================
+# Production environment
+# ============================================
+[env.production]
+name = "cabana-pwa-production"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "cabana-pwa-db-prod"
+database_id = ""
+migrations_dir = "./migrations"
+
+[[env.production.r2_buckets]]
+binding = "STORAGE"
+bucket_name = "cabana-pwa-media-prod"
+
+# ============================================
+# Dev environment
+# ============================================
+[env.dev]
+name = "cabana-pwa-dev"
