@@ -11,17 +11,16 @@ pages_build_output_dir = ".vercel/output/static"
 [[d1_databases]]
 binding = "DB"
 database_name = "cabana-pwa-db"
-database_id = ""
+database_id = "e2e119db-3f90-460d-afba-22d4f65d2a55"
 preview_database_id = "cabana-pwa-db-preview"
 migrations_dir = "./migrations"
 
 # ============================================
-# R2 Object Storage (Images, PDFs)
-# ============================================
-[[r2_buckets]]
-binding = "STORAGE"
-bucket_name = "cabana-pwa-media"
-preview_bucket_name = "cabana-pwa-media-preview"
+# R2 Object Storage (Images, PDFs) — enable via Cloudflare Dashboard first
+# [[r2_buckets]]
+# binding = "STORAGE"
+# bucket_name = "cabana-pwa-media"
+# preview_bucket_name = "cabana-pwa-media-preview"
 
 # ============================================
 # Environment variables
