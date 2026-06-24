@@ -15,11 +15,11 @@ database_id = "e2e119db-3f90-460d-afba-22d4f65d2a55"
 migrations_dir = "./migrations"
 
 # ============================================
-# R2 Object Storage (Images, PDFs) — enable via Cloudflare Dashboard first
-# [[r2_buckets]]
-# binding = "STORAGE"
-# bucket_name = "cabana-pwa-media"
-# preview_bucket_name = "cabana-pwa-media-preview"
+# R2 Object Storage (Images, PDFs)
+# ============================================
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "cabana-pwa-media"
 
 # ============================================
 # Environment variables
