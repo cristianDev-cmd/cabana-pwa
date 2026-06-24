@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cloudflare Pages edge runtime
+  // Static export for Cloudflare Pages
   output: "standalone",
 
   // Bypass TS type checking during build (node_modules type issues)
