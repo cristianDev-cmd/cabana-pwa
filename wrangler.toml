@@ -47,7 +47,7 @@ binding = "STORAGE"
 bucket_name = "cabana-pwa-media-prod"
 
 # ============================================
-# Dev environment
+# Preview environment (for PRs and branch deploys)
 # ============================================
-[env.dev]
-name = "cabana-pwa-dev"
+[env.preview]
+name = "cabana-pwa-preview"
